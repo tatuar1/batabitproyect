@@ -1,0 +1,703 @@
+
+/*
+1.-Posicionamiento
+2.-Modelo de caja
+.-Tipografia
+4.-Estilos
+5.-Miseláneos
+*/
+
+:root{
+    /* variable colores colors*/
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D4;
+    --secondary-blue: #1A9AF7;
+   --warm-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #FFFFFF;
+    --warm-black-1: #282623;
+
+    
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px ;  /*el min-width es el limite hasta donde llegara el width, Es menor*/
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+
+ 
+
+}
+
+
+
+header img { /*solo el logotipo con especifidad*/
+    width: 150px;
+    height: 24px;
+    margin-top: 50px;
+    align-self: center;
+  
+}
+.header__title-container{/* contenedor div dentro del header, todo lo que esta dentro, no es parte del logotipo*/
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 40px;
+    text-align: center;  /*para que el texto se centre*/
+    align-self: center;  /*alinea lo que esta dentro del contenedor, texto*/
+    
+}
+.header__title-container h1{
+    font-size: 2.4rem;
+    font-weight:bold ; /*  especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold.*/
+    line-height: 2.6rem; /* Salto de linea entre una fuent ey otro*/
+    color: var(--just-white);
+
+}
+.header__title-container p{
+   margin-top: 25px;
+   font-size: 1.4rem;
+   font-weight: 500;
+   line-height: 1.8rem;
+   color: var(--soft-orange);
+
+}
+.header__title-container .header__button{
+    position: absolute;
+    left: calc(50% - 118px); /*Hace un calculo en proporcion a l width para posoiconar un elemtno (boton) */
+    top: 270px;
+    display: block;
+    margin-top:35px ;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    /* Sombra*/
+    box-shadow: 0px 4px 8px rgba(89,73,30,0.16);
+    border: none; /* Quita los border que esten previamente cargados*/
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black);
+}
+.header__button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url("./asset/icon/arrow_down.svg");
+
+}
+main{
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    background-color: var(--off-white);
+
+}
+
+.main-exchange-container{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+
+}
+
+.main-exchange-container__title{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.main-exchange-container .backgroundImg{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-image: url(./asset/imgs/Bitcoin.svg);
+}
+
+.main-exchange-container h2{
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight:bold ; /*  especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold.*/
+    line-height: 2.6rem; /* line-height es el interlineado de párrafo (no el alto de fuente). Se usa para establecer la distancia entre líneas de texto.*/
+    color: var(--black);
+
+}
+.main-exchange-container p{
+   margin-top: 30px;
+   font-size: 1.4rem;
+   font-weight: 500;
+   line-height: 1.8rem;
+   color: #757575;
+
+}
+.main-exchange-container .currency-table__title  {
+    margin-bottom: 15px; /*separa del texto de abajo*/
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;  
+    color: var(--bitcoin-orange);
+
+}
+
+.main-tables-container .main-currency-table{
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: "inter", sans-serif;
+}
+
+.currency-table__container{
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+
+}
+.currency-table__container table{
+    width: 100%;
+    height: 100%;
+}
+
+.currency-table__container td{
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+ 
+
+}
+.currency-table__container .table--top-left{
+    border-top-left-radius: 8px;
+}
+.currency-table__container .table--top-right {
+    border-top-right-radius: 8px;
+}
+.currency-table__container .table--bottom-left{
+    border-bottom-left-radius:8px
+}
+.currency-table__container .table--bottom-right{
+    border-bottom-right-radius:8px;
+
+}
+
+
+.currency-table__container .table--right{
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+ 
+
+}
+
+
+
+.currency-table__container .down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url(./asset/icon/trending-down1.svg);
+    background-size: cover; /* Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.*/
+    background-repeat: no-repeat;
+   margin-bottom: -1px;
+
+}
+.currency-table__container .up{
+    display: inline-block;
+    width: 15px;
+    margin-left: 10px;
+    height: 15px;
+    background-size: cover; /* Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.*/
+    background-position: center;
+    background-image: url(./asset/icon/trending-up.svg);
+    background-repeat: no-repeat;
+    margin-bottom: -3px;
+
+}
+
+
+.currency-table-date{
+    width: 170px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+ 
+}
+.currency-table-date p{
+    margin: 1px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+}
+
+ /* Empieza segunda tabla */
+ .main-exchange-container .commission-table__title  {  
+    margin-bottom: 15px; /*separa del texto de abajo*/
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;  
+    color: var(--secondary-blue);
+ }
+ 
+ .main-tables-container .main-commission-table{
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: "inter", sans-serif;
+}
+
+.commission-table__container{
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+
+}
+.commission-table__container table{
+    width: 100%;
+    height: 100%;
+}
+
+.commission-table__container td{
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+ 
+
+}
+.commission-table__container .table--top-left{
+    border-top-left-radius: 8px;
+}
+.commission-table__container .table--top-right {
+    border-top-right-radius: 8px;
+}
+.commission-table__container .table--bottom-left{
+    border-bottom-left-radius:8px
+}
+.commission-table__container .table--bottom-right{
+    border-bottom-right-radius:8px;
+
+}
+
+.commission-table__container .table--right{
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+
+}
+
+
+
+
+.commission-table-date{
+    width: 170px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: #E7F5FF;
+    border-radius: 8px;
+ 
+}
+.commission-table-date p{
+    margin: 1px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+} 
+
+/* Empieza tercera seccion three section */
+
+
+
+.main-product-detail{
+    position: relative;
+    width: 100%;
+    min-width: 320px ;  /*el min-width es el limite hasta donde llegara el width, Es menor*/
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black)
+
+}
+.product-detail__batata-logo{
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    top: -10px;
+    left: calc(50% - 20px);
+    background-image: url(./asset/icon/batata-benef.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+} /* Comienzan la seccion de articule */
+.product-detail__title{ /* Contenedor the h2 */
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center; /* Centtra el texto */
+    color: var(--just-white);
+}
+
+
+.product-detail__title h2{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+.product-detail__title p{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color:  #808080;
+    ;
+}
+.product-detail__card {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 160px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--warm-black-1);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16px);
+    
+}
+.product-detail__card .clock{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-bottom: 10px;
+    background-position: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./asset/icon/clock.svg);
+}
+.product__card-title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+
+}
+.product__card-body{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+    
+
+}
+
+.product-detail__card .eye {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-bottom: 10px;
+    background-position: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./asset/icon/eye.svg);
+
+}
+.product-detail__card .dollar {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-bottom: 10px;
+    background-position: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./asset/icon/dollar-sign.svg);
+}
+.product-detail__card .check {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-bottom: 10px;
+    background-position: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(./asset/icon/check-circle.svg);
+}
+.bitcoin-img-container{
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background-image: url(./asset/imgs/bitcoin-baby_11zon.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bitcoin-img-container h2{
+    padding: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    text-align: center;
+
+}
+.main-plans-container{   /* Contenedor */
+    width: 100;
+    min-height: 320px;
+    padding-bottom: 70px; 
+    text-align: center;
+
+}
+.plans__title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin:0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    
+}
+.plans__title h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    color: var(--warm-black);
+    
+
+
+}
+.plans__title p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+
+}
+.plans-container__card{
+    position: relative;
+    scroll-snap-align:center;
+   width: 70%;
+  
+   min-width: 233px;
+   max-width: 300px;
+   height: 230px;
+   margin: 50px 5px 0;
+   padding: 0 15px;
+   background-color: var(--just-white);
+    border: none; /* Quita los border que esten previamente cargados*/
+    border-radius: 8px;
+    box-shadow: 0px  4px 8px 0px  rgba(89, 73, 30, 0.16);
+     
+  
+}
+.plans-container__slider{
+    display: flex;
+    gap: 20px; /*  crea un espacio around de los elementos y/ocontenedores*/
+    height: 316px;
+    margin: 0px 50px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity ;
+}
+
+ .plans-container__title{
+    
+    position: relative;
+    background-color: var(--bitcoin-orange);
+    left: calc(50% - 50px); /*Hace un calculo en proporcion a l width para posoiconar un elemEMtno (boton) */
+    padding: 8px;
+    width: 101px;
+    height: 31px;
+    bottom: 15px;
+  /* Sombra*/
+    box-shadow: 0px 4px 8px rgba(89,73,30,0.16);
+    border: none; /* Quita los border que esten previamente cargados*/
+    border-radius: 8px;
+}
+.plans-container-monthly{
+    background-color: rgb(253,195,45);
+    
+    
+    
+}
+
+.plans-container-lifetime{
+   
+    background-color:rgb(253,76,45);
+
+}
+
+#plans-buttom__lifetime{
+    border: solid rgb(253,76,45);
+}
+#plans-buttom__monthly{
+    border: solid rgb(253,195,45);
+}
+
+.plans-info{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+    color: var(--just-white);
+  
+    
+}
+
+
+
+
+.plan-section-container h3{
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    color: #000000;
+   
+    
+}
+ .plan-section__price-annual {
+    font-family: 'Inter', sans-serif;
+    font-size: 4.2rem;
+    font-weight: bold;
+    line-height: 6.3rem;
+    letter-spacing: -3px;
+    color: #000000;
+  
+}
+.plan-section-container span{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    vertical-align: 25px;
+    color: #363636;
+  
+    
+}
+
+ .plan-section__price-monthly{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #757575;
+}
+.plans-buttom{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--black);
+    width: 150px;
+    height: 48px;
+    border: solid var(--bitcoin-orange);
+    background-color: var(--off-white);
+    border-radius: 4px;
+  
+   
+}
+.plans-buttom span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin:0;
+    background-image: url(./asset/icon/arrow-right.svg);
+    background-repeat: no-repeat;
+    vertical-align: text-bottom; /* alinea iconoco con el texto */
+
+}
+
+
+.data-footer{
+    width: 100%;
+    min-width: 320px ;  /*el min-width es el limite hasta donde llegara el width, Es menor*/
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+.data-footer span{
+    position: relative;
+    width: 64px;
+    height: 50px;
+    display: block;
+    bottom: 30px;
+    left: calc(70% - 10px); /*Hace un calculo en proporcion a l width para posoiconar un elemEMtno (boton) */
+    background-image: url(./asset/imgs/logo-footer.svg);
+    background-repeat: no-repeat;
+}
+.data-footer-network li{
+    padding: 5px;
+    top: 25px;
+    text-decoration: none;
+    list-style: none;
+
+} 
+.data-footer-network a{
+    font-size: 1.4rem;
+   
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--just-white);
+    margin: 30px;
+    padding: 40px;
+    text-decoration: none;
+    text-align: center;
+
+}
